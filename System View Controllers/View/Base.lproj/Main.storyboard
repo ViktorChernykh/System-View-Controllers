@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="System_View_Controllers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="CoQ-EB-IS6">
+                                <rect key="frame" x="8" y="64" width="398" height="448"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmu-u4-UJ3">
+                                <rect key="frame" x="87.5" y="542" width="79" height="30"/>
+                                <state key="normal" title="Safari"/>
+                                <connections>
+                                    <action selector="safariButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SGH-ex-wsP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-JR-34g">
+                                <rect key="frame" x="166.5" y="542" width="79.5" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTx-gO-Gqg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWX-XM-VbH">
+                                <rect key="frame" x="246" y="542" width="79" height="30"/>
+                                <state key="normal" title="Email"/>
+                                <connections>
+                                    <action selector="emailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Bv-wg-tHF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGF-5X-S2T">
+                                <rect key="frame" x="325" y="542" width="79.5" height="30"/>
+                                <state key="normal" title="Message"/>
+                                <connections>
+                                    <action selector="messageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zIB-wf-DnS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hm-q3-Ht3">
+                                <rect key="frame" x="8" y="542" width="79.5" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LSz-dO-Uzx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0hm-q3-Ht3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="5GL-fG-QHM"/>
+                            <constraint firstItem="Xmu-u4-UJ3" firstAttribute="width" secondItem="0hm-q3-Ht3" secondAttribute="width" id="6F2-Ei-YmF"/>
+                            <constraint firstItem="Xmu-u4-UJ3" firstAttribute="bottom" secondItem="0hm-q3-Ht3" secondAttribute="bottom" id="7W2-a4-atP"/>
+                            <constraint firstItem="ZGF-5X-S2T" firstAttribute="leading" secondItem="GWX-XM-VbH" secondAttribute="trailing" id="90s-y7-8If"/>
+                            <constraint firstItem="Xmu-u4-UJ3" firstAttribute="leading" secondItem="0hm-q3-Ht3" secondAttribute="trailing" id="C4X-hP-MDS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZGF-5X-S2T" secondAttribute="trailing" constant="9.5" id="EZK-6N-4SG"/>
+                            <constraint firstItem="GWX-XM-VbH" firstAttribute="bottom" secondItem="cnt-JR-34g" secondAttribute="bottom" id="IFY-r4-MMa"/>
+                            <constraint firstItem="GWX-XM-VbH" firstAttribute="width" secondItem="cnt-JR-34g" secondAttribute="width" id="NN8-sS-ioJ"/>
+                            <constraint firstItem="CoQ-EB-IS6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="RrY-aR-wc1"/>
+                            <constraint firstItem="CoQ-EB-IS6" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1/2" id="TvQ-gW-bPo"/>
+                            <constraint firstItem="GWX-XM-VbH" firstAttribute="leading" secondItem="cnt-JR-34g" secondAttribute="trailing" id="bda-Wv-lGY"/>
+                            <constraint firstItem="CoQ-EB-IS6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cVY-XF-Z6z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CoQ-EB-IS6" secondAttribute="trailing" constant="8" id="kGb-Xc-jNQ"/>
+                            <constraint firstItem="0hm-q3-Ht3" firstAttribute="top" secondItem="CoQ-EB-IS6" secondAttribute="bottom" constant="30" id="nSI-Lg-cOb"/>
+                            <constraint firstItem="cnt-JR-34g" firstAttribute="leading" secondItem="Xmu-u4-UJ3" secondAttribute="trailing" id="oHZ-nd-zoG"/>
+                            <constraint firstItem="ZGF-5X-S2T" firstAttribute="bottom" secondItem="GWX-XM-VbH" secondAttribute="bottom" id="tdF-zO-Q9E"/>
+                            <constraint firstItem="cnt-JR-34g" firstAttribute="bottom" secondItem="Xmu-u4-UJ3" secondAttribute="bottom" id="vNA-WL-y4F"/>
+                            <constraint firstItem="cnt-JR-34g" firstAttribute="width" secondItem="Xmu-u4-UJ3" secondAttribute="width" id="yZf-14-9Hs"/>
+                            <constraint firstItem="ZGF-5X-S2T" firstAttribute="width" secondItem="GWX-XM-VbH" secondAttribute="width" id="yy1-g4-302"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="CoQ-EB-IS6" id="CUB-Mx-OK5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nature" width="960" height="640"/>
+    </resources>
+</document>
