@@ -52,8 +52,8 @@ class ViewController: UIViewController {
                 self.present(imagePicker, animated: true)
             }
             alertController.addAction(cameraAction)
-//            present(alertController, animated: true)
         }
+        
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { action in
                 imagePicker.sourceType = .photoLibrary
@@ -80,16 +80,6 @@ class ViewController: UIViewController {
         mailComposer.setSubject("Please help with my homework")
         mailComposer.setMessageBody("Hello, please help me with the following...", isHTML: false)
 
-//        if let filePath = Bundle.main.path(forResource: "nature", ofType: "jpg") {
-//            let url = URL(fileURLWithPath: filePath)
-//
-//            do {
-//                let attachmentData = try Data(contentsOf: url)
-//                mailComposer.addAttachmentData(attachmentData, mimeType: "application/jpg", fileName: "nature")
-//            } catch let error {
-//                print("We have encountered error \(error.localizedDescription)")
-//            }
-//        }
         if let imageData = imageView.image!.jpegData(compressionQuality: 1) {
             mailComposer.addAttachmentData(imageData, mimeType: "application/jpg", fileName: "nature")
         }
@@ -112,10 +102,6 @@ class ViewController: UIViewController {
         messageComposer.messageComposeDelegate = self
 
         if MFMessageComposeViewController.canSendAttachments() {
-//            if let filePath = Bundle.main.path(forResource: "nature", ofType: "jpg") {
-//                let url = URL(fileURLWithPath: filePath)
-//                messageComposer.addAttachmentURL(url, withAlternateFilename: nil)
-//            }
             if let imageData = imageView.image!.jpegData(compressionQuality: 1) {
                 messageComposer.addAttachmentData(imageData, typeIdentifier: "public.data", filename: "nature.jpg")
             }
