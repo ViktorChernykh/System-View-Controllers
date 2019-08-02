@@ -80,8 +80,20 @@ class ViewController: UIViewController {
         mailComposer.setSubject("Please help with my homework")
         mailComposer.setMessageBody("Hello, please help me with the following...", isHTML: false)
 
-        if let imageData = imageView.image!.jpegData(compressionQuality: 1) {
-            mailComposer.addAttachmentData(imageData, mimeType: "application/jpg", fileName: "nature")
+//        if let filePath = Bundle.main.path(forResource: "nature", ofType: "jpg") {
+//            let url = URL(fileURLWithPath: filePath)
+//
+//            do {
+//                let attachmentData = try Data(contentsOf: url)
+//                mailComposer.addAttachmentData(attachmentData, mimeType: "application/jpg", fileName: "nature")
+//            } catch let error {
+//                print("We have encountered error \(error.localizedDescription)")
+//            }
+//        }
+        if let image = imageView.image {
+            if let data = image.jpegData(compressionQuality: 1) {
+                mailComposer.addAttachmentData(data, mimeType: "application/jpg", fileName: "nature")
+            }
         }
         
         mailComposer.popoverPresentationController?.sourceView = view
@@ -102,6 +114,10 @@ class ViewController: UIViewController {
         messageComposer.messageComposeDelegate = self
 
         if MFMessageComposeViewController.canSendAttachments() {
+//            if let filePath = Bundle.main.path(forResource: "nature", ofType: "jpg") {
+//                let url = URL(fileURLWithPath: filePath)
+//                messageComposer.addAttachmentURL(url, withAlternateFilename: nil)
+//            }
             if let imageData = imageView.image!.jpegData(compressionQuality: 1) {
                 messageComposer.addAttachmentData(imageData, typeIdentifier: "public.data", filename: "nature.jpg")
             }
